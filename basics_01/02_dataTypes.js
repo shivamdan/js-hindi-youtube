@@ -12,10 +12,19 @@ console.log(3+3); console.log("Shivam") // Here, both print statements are writt
 let name = "Shivam"; // String data type
 let age = 22 // number data type
 let isLoggedIn = false; // boolean data type
+let value;
 
 // Number => 2^53 on both +ve and -ve sides
 // bigInt => For numbers larger than "Number" range
 // string => "" or ''
 // boolean => true or false
 // null => it's a standalone value(Empty value)
-// undefined => 
+// undefined => it means the value is not defined. If a variable is not initialized, then, it's value is undefined by default. undefined is of type undefined
+// symbol => unique
+// When we see the type of null , then it comes out to be an object type
+
+// Object : Non-primitive data types
+
+//to know the type of
+console.log(typeof age);
+console.log(typeof null);
