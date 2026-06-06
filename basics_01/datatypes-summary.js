@@ -15,7 +15,7 @@ let userEmail; // By default it will be of undefined value, if no value assigned
 const id = Symbol('123');
 const anotherId = Symbol('123');
 
-console.log(id===anotherId); // comparing the two Symbol datatype variables
+// console.log(id===anotherId); // comparing the two Symbol datatype variables
 
 const bigNumber = 123456789123456789n // to indicate this value as bigInt, add n at end
 
@@ -37,7 +37,26 @@ const myFunction = function(){
 
 // typeof function in js is used to get the datatype of a variable
 // Here, if a variable is not declared, then the typeof method returns "undefined" for it
-console.log(typeof hello); // "hello" variable is not declared, so it's type is declared undefined right now
+// console.log(typeof hello); // "hello" variable is not declared, so it's type is declared undefined right now
 // Also, the typeof function returns object as the datatype of a variable having null value
-console.log(typeof heros); // heros is an array, which is of type of object
-console.log(typeof myFunction); // the variable containing a function is of type "function" which comes under the umbrella of objects only
+// console.log(typeof heros); // heros is an array, which is of type of object
+// console.log(typeof myFunction); // the variable containing a function is of type "function" which comes under the umbrella of objects only
+
+//=====================================================================================
+//Stack(for primitive datatypes) memory and Heap(for non-primitive datatypes) memory
+let myYoutubeName = "shivamdandotcom"
+let anotherName = myYoutubeName;
+anotherName = "chaiaurcode"
+console.log(myYoutubeName);
+console.log(anotherName);
+
+// Now, let's see for non-primitive datatypes
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+} // here, the reference variable userOne is stored in stack, but, the object it is pointing to is stored in heap
+let userTwo = userOne // here, userTwo also references to the same memory or object to which the userOne is referring to
+
+userTwo.email = "shivam@google.com" // Since the value is changed, and both user reference variables point to same object, values for both of them will change as printed below
+console.log(userOne.email);
+console.log(userTwo.email);
